@@ -1,0 +1,30 @@
+
+<script>
+
+  var owl = $('.owl-carousel');
+  owl.owlCarousel({
+      items:3,
+      loop:true,
+      margin:10,
+      autoplay:true,
+      autoplayTimeout:10,
+      autoplayHoverPause:true
+  });
+  $('.play').on('click',function(){
+      owl.trigger('play.owl.autoplay',[10])
+  })
+  $('.stop').on('click',function(){
+      owl.trigger('stop.owl.autoplay')
+  })
+    </script>
+<div id="owl-carousel">
+<owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide>
+    <img src="../../assets/bookk.jpg" alt="book1"  height="320" width="470">
+
+  </ng-template>
+  <ng-template carouselSlide> <img src="../../assets/bookkk.jpg" alt="book2"  height="320" width="470"  ></ng-template >
+  <ng-template carouselSlide> <img src="../../assets/bookkkk.jpg" alt="book3"  height="320" width="470"></ng-template>
+</owl-carousel-o>
+
+</div>
