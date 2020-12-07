@@ -1,1 +1,80 @@
-<p>contenu works!</p>
+<style>
+  .contenu
+  {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+
+
+<div class="container" style="align-items: center;">
+<br><br><br>
+
+ <!-- <nav class="navbar navbar-expand-lg navbar-light " style="background-color:bisque">
+    <a class="navbar-brand" routerLink="/livre">Books</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>-->
+<div class="contenu">
+  <div class="card" style="width: 18rem;" (click)="navigate()">
+
+    <img  src="../../assets/bookcont.jpg" class="card-img-top" alt="livre" height="300" width="500">
+    <div class="card-body">
+      <h5 class="card-title">Books</h5>
+      <p class="card-text"> hello   </p>
+      <button  ><a routerLink="livre"></a> bb</button>
+
+
+
+    </div>
+  </div>
+
+
+  <div class="card" style="width: 18rem;">
+
+    <img  src="../../assets/music.jpg" class="card-img-top" alt="livre"height="300" width="500">
+    <div class="card-body">
+      <h5 class="card-title">Music</h5>
+      <p class="card-text"> hello   </p>
+      <button  ><a routerLink="livre"></a> bb</button>
+
+
+
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;" >
+
+    <img  src="../../assets/paint.jpg" class="card-img-top" alt="livre"height="300" width="500">
+    <div class="card-body">
+      <h5 class="card-title">Paintings</h5>
+      <p class="card-text"> hello   </p>
+      <button  ><a routerLink="livre"></a> bb</button>
+
+
+
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+
+</div>
+
+
+

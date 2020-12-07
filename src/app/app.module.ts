@@ -15,6 +15,9 @@ import { environment } from '../environments/environment';
 import { AuthService } from './shared/auth.service';
 import { ContenuComponent } from './contenu/contenu.component';
 import { LivreComponent } from './livre/livre.component';
+import { HomeComponent } from './home/home.component';
+import { ListlivresComponent } from './listlivres/listlivres.component';
+import { CreateBookComponent } from './create-book/create-book.component';
 
 
 
@@ -25,7 +28,11 @@ import { LivreComponent } from './livre/livre.component';
     CarouselComponent,
     LoginComponent,
     ContenuComponent,
-    LivreComponent
+    LivreComponent,
+    HomeComponent,
+    ListlivresComponent,
+    CreateBookComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,58 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+
+}
+
+#content {
+width: 100%;
+vertical-align: bottom ;;
+}
+#primo {
+*display: inline-block;
+width: 100%;
+
+vertical-align: top;
+}
+#secondo {
+*display: inline-block;
+width: 100%;
+
+vertical-align: top;
+}
+.displayy > div {
+width:1500 px;
+height :300;
+background-color: violet;
+border:1px solid;
+}
+
+.displayy
+{
+
+display: flex;
+justify-content: space-between;
+}
+
+.split {
+height: 10%;
+width: 50%;
+position: fixed;
+top: 10;
+overflow-x: hidden;
+padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+top: 0;
+background-color : whitesmoke;
+}
+
+/* Control the right side */
+.right {
+right: 0;
+background-color: whitesmoke;
+}

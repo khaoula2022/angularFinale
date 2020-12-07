@@ -1,1 +1,97 @@
-<p>livre works!</p>
+
+
+<style>
+
+  </style>
+
+
+
+<div div class="center">
+  <button  type="button" class="btn btn-outline-danger"
+style="background-color:darkred "> Add a new book</button>
+</div>
+<div class="center">
+  <button (click)="toggle()" type="button" class="btn btn-outline-danger"
+style="background-color:darkred "> Select a category </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div *ngIf="!isDisplay" style=" height :100px ">
+
+
+<div class="displayy">
+  <div class="left"></div>
+  <h4> Novels</h4><br>
+  <ul>
+
+   <input type="radio" > History
+    <p >  thriller</p>
+    <p >  Mystery</p>
+    <p >  Horror</p>
+    <p >  Supernaturl</p>
+    <p >  Fantasy</p>
+  </ul>
+  <div class="center"></div>
+  <h4> Short Books</h4><br>
+  <ul>
+
+    <p >  Poetry</p>
+    <p >  Art</p>
+    <p >  Media</p>
+    <p >  Entertainment</p>
+    <p >  Astrology</p>
+    <p >  Health care</p>
+  </ul>
+  <div class="right"></div>
+
+</div>
+</div>
+<br><br><br><br><br><br><br>
+<div class="container">
+
+<br>
+<br>
+
+<!--[ngStyle]="{'background-color':getColor()}" -->
+
+</div>
+
+ <div>
+  <h1>Les Livres disponibles</h1>
+  <!--<button type="button" [routerLink]="/crud/create/">Create new product</button>-->
+  <div class="container">
+  <div class="card-body"  *ngFor="let lv of livs">
+    <h5 class="card-title">{{lv.title}}
+      <br> {{lv.short_description}}  </h5>
+    {{lv.author}}
+    {{lv.isbn}}
+
+
+    <button class="btn btn-success" >
+    <a routerLink="/livre"> Acceder </a>
+    </button>
+    </div>
+</div>
+
+</div>
+
+
