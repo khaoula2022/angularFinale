@@ -14,6 +14,12 @@
   margin-top:-500px;
 
 }
+.imageback{
+  background-size:cover;
+  background-image:url('/../assets/images.jpg');
+
+  margin-top:-300px;
+}
 
 #parag
 {
@@ -64,7 +70,8 @@
   background-color : darkred;
 }
 body{
-  background-color: bisque;
+  background-color:gray;
+
 }
 /* Dropdown content (hidden by default) */
 .dropdown-content {

@@ -41,7 +41,7 @@
     <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search using the title </button>-->
 
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log In </button>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="register()">Log In </button>
 
     </form>
 
@@ -54,9 +54,12 @@
 
 
 
+
 <app-carousel></app-carousel>
 
 <router-outlet></router-outlet>
+
+
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="/__/firebase/8.1.2/firebase-app.js"></script>
 
