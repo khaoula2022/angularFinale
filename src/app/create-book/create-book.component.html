@@ -2,9 +2,9 @@
 <table class="table">
   !--  <tr><th>Cin</th><th>Nom</th><th>Prenom</th><th>action</th></tr>
     <tr *ngFor="let e of ListLivres">
+
       <td>{{e.author}}</td>
-      <td>{{e.comment}}</td>
-      <td>{{e.price}}</td>
+      <td>{{e.title}}</td>
 
 
 
@@ -16,10 +16,7 @@
 
 
 <form>
-  <div class="form-group">
-    <label>Id</label>
-    <input type="text" name="id" [(ngModel)]="Livre.id" class="form-control">
-  </div>
+
   <div class="form-group">
     <label>auth</label>
     <input type="text" name="nom" [(ngModel)]="Livre.author" class="form-control">
