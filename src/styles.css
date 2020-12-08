@@ -8,6 +8,40 @@
   background-color: aliceblue ;
 }
 
+.image{
+  background-size:cover; width:auto;
+  background-image:url('/../assets/class.png');
+  margin-top:-500px;
+
+}
+
+#parag
+{
+  font-size :25px;
+  font-family: 'Brush Script MT', cursive;
+}
+#form {
+  margin-top: 40px;
+  border-radius: 2px;
+
+  padding: 460px;
+}
+
+#first
+{
+  font-size :40px;
+  color: darkred;
+  font-family: 'Brush Script MT', cursive;
+}
+#second
+{
+  font-size :80px;
+  color: darkred;
+  font-family: 'Brush Script MT', cursive;
+}
+
+
+
 .dropdown {
   float: left;
   overflow: hidden;

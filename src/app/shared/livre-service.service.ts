@@ -28,5 +28,8 @@ export class LivresServiceService {
     return this.httpClient.post(this.url, l);
    }
 
+   DeleteBook(title) {
+    return this.httpClient.delete(this.url + title);
+   }
 
 }

@@ -1,11 +1,43 @@
+template: `
+  <img src="assets/img/logo.png">
+`
+
+<script>
+   $scope.files =[];
+
+$scope.uploadFile=function(element)
+{
+  var reader = new FileReader();
+  reader.onload= function(event)
+  {
+    $scope.image_source=event.target.result;
+    $scope.$apply(function($scope)
+    {
+      $scope.files = element.files;
+      $scope.src = event.target.result;
+    });
+
+  }
+  reader.readAsDataURL(element.files[0]);
+}
+
+</script>
 
 <table class="table">
-  !--  <tr><th>Cin</th><th>Nom</th><th>Prenom</th><th>action</th></tr>
+  <tr><th>Author</th><th>Title</th><th>Synopsis</th><th>price</th><th>quantity</th><th>Publication Date</th>
+    <th>image</th><th>type</th><th>Pdf document</th> </tr>
     <tr *ngFor="let e of ListLivres">
 
       <td>{{e.author}}</td>
       <td>{{e.title}}</td>
-
+      <td>{{e.short_description}}</td>
+      <td>{{e.price}}</td>
+      <td>{{e.quantity}}</td>
+      <td>{{e.publication_date}}</td>
+      <td>{{e.image}}</td>
+      <td>{{e.type}}</td>
+      <td>{{e.document}}</td>
+      <td> <button class="btn btn-dark" (click)="delete(e.title)"> delete</button></td>
 
 
 
@@ -15,7 +47,7 @@
 
 
 
-<form>
+<!--<form>
 
   <div class="form-group">
     <label>auth</label>
@@ -25,9 +57,140 @@
     <label>desc</label>
     <input type="text" name="prenom" [(ngModel)]="Livre.title" class="form-control">
   </div>
-  <div >
-  <button (click)="save()" class="btn btn-success"></button>
-</div>
+
  </form>
+-->
+
+
+
+
+
+
+   <h1>r!</h1>
+   <div class="container">
+   <form [formGroup]="CreateBookForm">
+     <div class="form-group">
+       <label>Title:</label>
+       <input type="text" class="form-control" formControlName="title"  [(ngModel)]="Livre.title">
+       <br>
+       <div class="alert alert-danger" *ngIf="CreateBookForm.get('title').errors && CreateBookForm.get('title').touched">
+         <div *ngIf="CreateBookForm.get('title').hasError('required')">The name is a required field</div>
+         <div *ngIf="CreateBookForm.get('title').hasError('minlength')">The name minlength is 3 </div>
+       </div>
+     </div>
+     <div class="form-group">
+       <label>Author:</label>
+       <input type="text" class="form-control" formControlName="author"  [(ngModel)]="Livre.author">
+       <br>
+       <div class="alert alert-danger" *ngIf="CreateBookForm.get('author').errors && CreateBookForm.get('author').touched">
+         <div *ngIf="CreateBookForm.get('author').hasError('required')">The name is a required field</div>
+         <div *ngIf="CreateBookForm.get('author').hasError('minlength')">The name minlength is 3 </div>
+       </div>
+     </div>
+
+     <div class="form-group">
+       <label>Synopsis:</label>
+       <input type="text" class="form-control" formControlName="synopsis"  [(ngModel)]="Livre.short_description">
+       <br>
+       <div class="alert alert-danger" *ngIf="CreateBookForm.get('synopsis').errors && CreateBookForm.get('synopsis').touched">
+         <div *ngIf="CreateBookForm.get('synopsis').hasError('required')">The name is a required field</div>
+         <div *ngIf="CreateBookForm.get('synopsis').hasError('minlength')">The name minlength is 3 </div>
+       </div>
+     </div>
+     <div class="form-group">
+       <label>price:</label>
+       <input type="text" class="form-control" formControlName="price"  [(ngModel)]="Livre.price">
+       <br>
+       <div class="alert alert-danger" *ngIf="CreateBookForm.get('price').errors && CreateBookForm.get('price').touched">
+         <div *ngIf="CreateBookForm.get('price').hasError('required')">The name is a required field</div>
+         <div *ngIf="CreateBookForm.get('price').hasError('minlength')">The name minlength is 3 </div>
+         <div *ngIf="CreateBookForm.get('price').hasError('maxlength')">The price maxlength is 2 </div>
+         <div *ngIf="CreateBookForm.get('price').hasError('min')">The price cannot be negative </div>
+         <div *ngIf="CreateBookForm.get('price').hasError('pattern')">The price cannot be a letter </div>
+
+       </div>
+     </div>
+     <div class="form-group">
+       <label>quantity:</label>
+       <input type="text" class="form-control" formControlName="quantity"  [(ngModel)]="Livre.quantity">
+       <br>
+       <div class="alert alert-danger" *ngIf="CreateBookForm.get('quantity').errors && CreateBookForm.get('quantity').touched">
+         <div *ngIf="CreateBookForm.get('quantity').hasError('required')">The name is a required field</div>
+         <div *ngIf="CreateBookForm.get('quantity').hasError('minlength')">The name minlength is 3 </div>
+         <div *ngIf="CreateBookForm.get('quantity').hasError('min')">The quantity cannot be negative </div>
+         <div *ngIf="CreateBookForm.get('quantity').hasError('pattern')">The quantity cannot be a letter </div>
+
+       </div>
+     </div>
+
+     <div class="form-group">
+       <label>publication date:</label>
+       <div >
+
+         <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+           <input placeholder="Select date" type="date" id="example" class="form-control"  [(ngModel)]="Livre.publication_date">
+
+         </div>
+
+     </div>
+     </div>
+
+     <div class="form-group">
+       <label> Cover image </label>
+       <div >
+    <input type="file"  (change)="onFileselected($event)"  [(ngModel)]="Livre.image" >
+
+
+     </div>
+     </div>
+
+     <div class="form-group">
+      <label class="control-label col-sm-2">  image </label>
+      <div >
+   <input type="file" ng-model="myFile" onchange="angular.element(this).scope.uploadFile(this)" class="
+   btnbtn-info " ng-required="true"  [(ngModel)]="Livre.image" >
+
+
+    </div>
+    </div>
+
+     <div class="form-group">
+      <label> Pdf Document </label>
+      <div >
+   <input type="file"  (change)="onFileselected($event)"  [(ngModel)]="Livre.document" >
+
+
+    </div>
+    </div>
+
+
+     <div class="form-group">
+       <label>Type :</label>
+     <select name="type" id="type" >
+
+       <option value="">--Please choose an option--</option>
+       <option value="history">history</option>
+       <option value="horror">horror</option>
+       <option value="mystery">mystery</option>
+
+   </select>
+     </div>
+
+
+
+
+
+     <button class="btn btn-success" type="submit" [disabled]="CreateBookForm.invalid">
+       Submit
+     </button>
+     <div >
+      <button (click)="save()" class="btn btn-success"></button>
+    </div>
+
+   </form>
+   </div>
+
+
+
 
 

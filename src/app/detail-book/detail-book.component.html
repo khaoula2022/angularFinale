@@ -1,0 +1,29 @@
+
+
+<html>
+  <body class="image">
+
+
+<div class="container" id="form">
+    <div *ngFor="let p of livres">
+    <div  *ngIf="p.id==id">
+     <p id="first"  class="display-1">Title :<span id="second">{{p.title}}</span> </p>
+     *******************************
+     <p id="parag">Author : {{p.author}}</p>
+      *******************************
+
+     <p id="parag">Short Description : {{p.short_description}}</p>
+     *******************************
+
+     <p id="parag">Quantity : {{p.quantity}}</p>
+     *******************************
+
+     <p id="parag"> Price : {{p.price}}</p>
+      <div class="info">
+
+      </div>
+    </div>
+      </div>
+    </div>
+  </body>
+</html>

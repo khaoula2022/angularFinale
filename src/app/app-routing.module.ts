@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { LivreComponent } from './livre/livre.component';
 import { ListlivresComponent } from './listlivres/listlivres.component';
 import { CreateBookComponent } from './create-book/create-book.component';
+import { DetailBookComponent } from './detail-book/detail-book.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'livre', component: LivreComponent  },
   {path: 'list/:type', component: ListlivresComponent},
   {path: 'create', component: CreateBookComponent  },
+  {path: 'livre/detail/:id', component: DetailBookComponent },
 ];
 
 @NgModule({

@@ -1,12 +1,12 @@
 export class Livres {
-  id: number;
+  id: string;
   isbn : number ;
   title: string;
   author:string;
   short_description: string;
   price: number;
   quantity: number;
-  publication_date:string;
+  publication_date:Date;
 
   image : string ;
   type:string;

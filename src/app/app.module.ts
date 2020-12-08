@@ -20,6 +20,7 @@ import { ListlivresComponent } from './listlivres/listlivres.component';
 import { CreateBookComponent } from './create-book/create-book.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailBookComponent } from './detail-book/detail-book.component';
 
 
 
@@ -34,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ListlivresComponent,
     CreateBookComponent,
+    DetailBookComponent,
 
   ],
   imports: [

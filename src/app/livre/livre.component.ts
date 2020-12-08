@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class LivreComponent implements OnInit {
 isDisplay=true ;
 livs : Livres[];
+@Input() livre: Livres;
   constructor( private router : Router , private service : LivresServiceService) { }
 
   ngOnInit(): void {
@@ -34,6 +35,13 @@ create(){
   //also you can pass like this,
   // this.router.navigateByURL(['path']);
   }
+
+  detail(){
+    //do your any operations
+    this.router.navigate(['detail',this.livre.id]);
+    //also you can pass like this,
+    // this.router.navigateByURL(['path']);
+    }
 
   getColor(a : Livres)
   { if (a.quantity ===0)

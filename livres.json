@@ -1,29 +1,13 @@
 {
   "livres": [
+
     {
-      "id": "1",
-      "title": "liv1",
-      "author": "auth",
-      "short_description": "khaoula",
-      "price": "5",
+      "title": "Dracula",
+      "author": "Bram Stocker",
+      "short_description": "Dracula is an 1897 Gothic horror  ",
+      "price": "14",
       "quantity": "2",
-      "publication_date": "12/01/2012",
-      "image": "image",
-      "type": "anthropologie",
-      "document": "oui",
-      "like": "0",
-      "rate": "0",
-      "comment": "comment"
-    },
-    {
-      "id": "14",
-      "author": "ff",
-      "title": "ff"
-    },
-    {
-      "author": "gg",
-      "title": "gg",
-      "id": "nfOF9pQ"
+      "id": "vlZK1Er"
     }
   ]
 }
