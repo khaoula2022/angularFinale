@@ -18,6 +18,8 @@ import { LivreComponent } from './livre/livre.component';
 import { HomeComponent } from './home/home.component';
 import { ListlivresComponent } from './listlivres/listlivres.component';
 import { CreateBookComponent } from './create-book/create-book.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -38,6 +40,9 @@ import { CreateBookComponent } from './create-book/create-book.component';
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     //AngularFireModule.initializeApp(environment.Firebase, 'angular-auth-firebase'),
     //AngularFireDatabaseModule,
     //AngularFireAuthModule
