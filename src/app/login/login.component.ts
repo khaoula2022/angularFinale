@@ -22,10 +22,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get username() { return this.login_group.get('username'); }
-  get password() { return this.login_group.get('password'); }
+  //get username() { return this.login_group.get('username'); }
+  //get password() { return this.login_group.get('password'); }
 
-  login() {
+  /*login() {
     const val = this.login_group.value;
 
     if (val.username && val.password) {
@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
                 }
             );
     }
-}
+}*/
 
 
 }

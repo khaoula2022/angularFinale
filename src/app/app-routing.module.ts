@@ -20,7 +20,6 @@ const routes: Routes = [
   {path: 'create', component: CreateBookComponent  },
   {path: 'livre/detail/:id', component: DetailBookComponent },
   {path: 'register', component: RegisterComponent  },
-  {path: 'login', component: LoginComponent  }
 ];
 
 @NgModule({

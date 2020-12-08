@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { UserService } from './../shared/user.service';
 import { User } from './../model/user';
 import { Component, OnInit } from '@angular/core';
+import Cotter from 'cotter';
 
 @Component({
   selector: 'app-register',
@@ -13,10 +14,14 @@ export class RegisterComponent implements OnInit {
   constructor( private service : UserService , private router : Router) { }
 user : User;
 Users: User[];
+
   ngOnInit(): void {
 
     this.user= new User();
+
+
   }
+
 
   save() {
     this.service.Register(this.user).subscribe(

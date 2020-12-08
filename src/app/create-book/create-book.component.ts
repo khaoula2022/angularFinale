@@ -70,9 +70,12 @@ this.SelectedFile=event.target.files[0]; }
 
 
 
-delete(title)
-{this.service.DeleteBook(title).subscribe(
-  () => this.ListLivres = this.ListLivres.filter(livre => livre.title != title)
+delete(id)
+{this.service.DeleteBook(id).subscribe(
+  () => this.ListLivres = this.ListLivres.filter(livre => livre.id != id)
 );
 }
+
+
+
 }

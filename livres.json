@@ -1,36 +1,24 @@
 {
   "livres": [
     {
-      "title": "Dracula",
-      "author": "Bram Stocker",
-      "short_description": "Dracula is an 1897 Gothic horror  ",
-      "price": "14",
-      "quantity": "2",
-      "id": "vlZK1Er"
-    },
-    {
-      "title": "As Darkness Breaks ",
-      "author": "Jhonny Nowell ",
-      "short_description": "DARKNESS AWAKES with horror themed tales for the MATURE reader ",
-      "price": "14",
-      "quantity": "2",
-      "id": "vlZK1Eu"
-    },
-    {
-      "title": "Thirteen revived ",
-      "author": "Jhonny Nowell ",
-      "short_description": "DARKNESS AWAKES with horror themed tales for the MATURE reader ",
-      "price": "14",
-      "quantity": "2",
-      "id": "vlZK1En"
-    },
-    {
-      "title": "haha",
-      "author": "haha",
-      "short_description": "hahahahahahahahahahahahaha",
+      "title": "kiki",
+      "author": "kaika",
+      "short_description": "rgijtrhokoptdyknojptdkjlkp",
       "price": "12",
       "quantity": "12",
-      "id": "AS8h07g"
+      "id": 3,
+      "image": "oui",
+      "type": "oui",
+      "date": "02/02/2002",
+      "document": ""
+    },
+    {
+      "title": "hoho",
+      "author": "hoho",
+      "short_description": "jrgkherhgijtrhiotyopo,jesroj",
+      "price": "20",
+      "quantity": "20",
+      "id": 4
     }
   ],
   "users": [

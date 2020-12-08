@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class LivresServiceService {
-  private url = "http://localhost:3000/livres";
+  private url = "http://localhost:3000/livres/";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -28,8 +28,8 @@ export class LivresServiceService {
     return this.httpClient.post(this.url, l);
    }
 
-   DeleteBook(title) {
-    return this.httpClient.delete(this.url + title);
+   DeleteBook(id) {
+    return this.httpClient.delete(this.url + id);
    }
 
 }

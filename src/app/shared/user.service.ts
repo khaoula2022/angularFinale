@@ -24,7 +24,7 @@ isLogged= false ;
    }
 
 
-   login(username: string, password: string) {
+  /* login(username: string, password: string) {
     for (this.i = 0; this.i < this.list.length; this.i++)
       if ((this.list[this.i].username!= username || this.list[this.i].password == null))
       {
@@ -39,6 +39,6 @@ isLogged= false ;
 
 
 
-  }
+  }*/
 
 }
