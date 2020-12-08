@@ -35,6 +35,15 @@ create(){
   // this.router.navigateByURL(['path']);
   }
 
+  getColor(a : Livres)
+  { if (a.quantity ===0)
+  return 'yellow' ;
+
+
+
+  }
+
+
 }
 
 
