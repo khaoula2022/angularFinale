@@ -23,4 +23,10 @@ export class LivresServiceService {
     return this.httpClient.get<Livres[]>(this.url);
   }
 
+
+  AddBook(l : Livres){
+    return this.httpClient.post(this.url, l);
+   }
+
+
 }

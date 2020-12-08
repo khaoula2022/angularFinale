@@ -1,6 +1,8 @@
+import { LivresServiceService } from './../shared/livre-service.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Livres } from '../model/livres';
 
 
 @Component({
@@ -9,30 +11,27 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./create-book.component.css']
 })
 export class CreateBookComponent implements OnInit {
-  CreateBookForm: FormGroup;
-  constructor( private http : HttpClient) { }
-
+//  CreateBookForm: FormGroup;
+  constructor( private http : HttpClient , private service : LivresServiceService) {}
+  ListLivres: Livres[];
 SelectedFile =null ;
+Livre : Livres;
 
 
     ngOnInit(): void {
-    this.CreateBookForm = new FormGroup({
-      title: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      author: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      synopsis: new FormControl('', [Validators.required, Validators.minLength(20)]),
-      price: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(2) , Validators.min(1),
-        Validators.pattern('[1-9]')]),
-      quantity: new FormControl('', [Validators.required, Validators.minLength(1),Validators.min(1),
-        Validators.pattern('[1-9]')]),
+      this.Livre =new Livres();
+      this.service.getLivres().subscribe(
+        (data: Livres[]) => this.ListLivres = data
+      );
 
-
-    });
   }
 
 
-  submit(){
-    alert('Book Created) ' + JSON.stringify(this.CreateBookForm.value));
-  }
+  save() {
+    this.service.AddBook(this.Livre).subscribe(
+      () => this.ListLivres = [this.Livre, ...this.ListLivres]
+    );
+   }
 
  /* onFileselected(event)
  {
