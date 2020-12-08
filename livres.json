@@ -36,7 +36,83 @@
       "rate" : "0",
       "comment":"comment"
 
+    },
+    {
+      "id": "1",
+      "isbn": "1234567",
+      "title": "liv1",
+      "author": "auth",
+      "short_description": "khaoula",
+      "price": "5",
+      "quantity":"2",
+      "publication_date":"12/01/2012",
+
+      "image":"image",
+      "type":"ok",
+      "document":"oui",
+      "like": "0",
+      "rate" : "0",
+      "comment":"comment"
+
     }
+    ,
+    {
+      "id": "1",
+      "isbn": "1234567",
+      "title": "liv1",
+      "author": "auth",
+      "short_description": "khaoula",
+      "price": "5",
+      "quantity":"2",
+      "publication_date":"12/01/2012",
+
+      "image":"image",
+      "type":"ok",
+      "document":"oui",
+      "like": "0",
+      "rate" : "0",
+      "comment":"comment"
+
+    }
+    ,
+    {
+      "id": "1",
+      "isbn": "1234567",
+      "title": "liv1",
+      "author": "auth",
+      "short_description": "khaoula",
+      "price": "5",
+      "quantity":"2",
+      "publication_date":"12/01/2012",
+
+      "image":"image",
+      "type":"ok",
+      "document":"oui",
+      "like": "0",
+      "rate" : "0",
+      "comment":"comment"
+
+    }
+    ,
+    {
+      "id": "1",
+      "isbn": "1234567",
+      "title": "liv1",
+      "author": "auth",
+      "short_description": "khaoula",
+      "price": "5",
+      "quantity":"2",
+      "publication_date":"12/01/2012",
+
+      "image":"image",
+      "type":"ok",
+      "document":"oui",
+      "like": "0",
+      "rate" : "0",
+      "comment":"comment"
+
+    }
+
 
   ]
 }

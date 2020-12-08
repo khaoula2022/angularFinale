@@ -35,6 +35,12 @@ border:1px solid;
 display: flex;
 justify-content: space-between;
 }
+.displayyy
+{
+
+display: flex;
+justify-content: space-between;
+}
 
 .split {
 height: 10%;

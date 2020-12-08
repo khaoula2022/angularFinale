@@ -13,10 +13,13 @@ import { Router } from '@angular/router';
 export class LivreComponent implements OnInit {
 isDisplay=true ;
 livs : Livres[];
-  constructor( private router : Router) { }
+  constructor( private router : Router , private service : LivresServiceService) { }
 
   ngOnInit(): void {
 
+    this.service.getLivres().subscribe(
+      (data: Livres[]) => this.livs = data
+    );
 
 
   }

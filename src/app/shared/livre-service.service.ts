@@ -8,27 +8,19 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class LivresServiceService {
-  private url = "http://localhost:3001";
+  private url = "http://localhost:3000/livres";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
   }
-  test = "How r u?";
   constructor(private httpClient: HttpClient) { }
-  create(livre): Observable<Livres> {
-    return this.httpClient.post<Livres>(this.url + '/livres/', JSON.stringify(livre), this.httpOptions);
 
-  }
 
-  getAll(): Observable<Livres[]> {
-    return this.httpClient.get<Livres[]>(this.url + '/livres/');
 
-  }
-
-  getByType(type): Observable<Livres> {
-    return this.httpClient.get<Livres>(this.url + '/list/' + type);
-
+  getLivres()
+  {
+    return this.httpClient.get<Livres[]>(this.url);
   }
 
 }

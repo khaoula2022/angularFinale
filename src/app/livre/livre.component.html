@@ -1,4 +1,49 @@
 
+
+
+
+
+
+<table class="table">
+  <tr><th>Cin</th><th>Nom</th><th>Prenom</th><th>action</th></tr>
+  <tr *ngFor="let e of livs">
+    <td>{{e.author}}</td>
+    <td>{{e.comment}}</td>
+    <td>{{e.price}}</td>
+
+
+
+
+  </tr>
+ </table>
+
+
+
+
+
+ <div class="container" class="displayyy">
+  <div class="card-body"  *ngFor="let lv of livs">
+    <h5 class="card-title">{{lv.title}}
+      <br> {{lv.short_description}}  </h5>
+    {{lv.author}}
+    {{lv.isbn}}
+
+
+    <button class="btn btn-success" >
+    <a routerLink="/livre"> Acceder </a>
+    </button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
 <div div class="center">
   <button  type="button" class="btn btn-outline-danger"  (click)="create()"
 style="background-color:darkred "> Add a new book</button>
